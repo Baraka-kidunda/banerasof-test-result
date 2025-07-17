@@ -1,0 +1,116 @@
+1.Test Case Name: Login with Valid Credentials.
+
+Steps to Reproduce:
+1. Launch the application  
+2. Navigate to the login page  
+3. Enter correct email and password  
+4. Click "Login"
+Expected Result:User is redirected to the dashboard  
+Actual Result:Dashboard loads successfully  
+Status:Pass  
+
+2.Test Case Name:Login with Inalid Credentials
+
+Steps to Reproduce:
+1. Launch the application  
+2. Navigate to the login page  
+3. Enter incorrect email and password  
+4. Click "Login"
+Expected Result:Error message is shown,"Couldn't find your account" 
+Actual Result:Error message displayed  
+Status:Pass 
+
+3. Test Case Name: Handling invalid API key
+
+Steps to Reproduce:
+1. Modify .env file with incorrect TMDB API key
+2. Reload app
+Expected Result: App shows appropriate error message
+Actual Result: App crashes with network error
+Status: Fail
+
+4.Test Case Name:Search for Movie Title
+
+Steps to Reproduce:
+1. Navigate to the movie page
+2. Navigate to search bar 
+3. Type "Baby boy"  
+4. Click search button
+Expected Result:“Baby boy” appears in search results 
+Actual Result:Movie found and listed 
+Status:Pass 
+
+5.Test Case Name:Search for Invalid Movie Title
+
+Steps to Reproduce:
+1. Enter random string “asdjkl” into search bar 
+2. Hit Enter
+Expected Result:“No results found” message appears
+Actual Result:Message displayed
+Status:Pass
+
+6.Test Case Name:Playback Selected Movie
+
+Steps to Reproduce:
+1. navigate to the dashboard
+2. Select any movie from results 
+3. click the play button  
+Expected Result:Movie doesn't play
+Actual Result:Video loaded without play
+Status:fail
+
+7. Test Case Name:Add Movie to Watchlist
+
+Steps to Reproduce:
+1. Select movie 
+2. Click Add to Watchlist
+Expected Result:Movie appears under user’s watchlist
+Actual Result:Movie added successfully
+Status:Pass 
+
+8. Test Case Name:Remove Movie from Watchlist
+
+Steps to Reproduce:
+1. Go to Watchlist 
+2. Click delete button to remove a movie
+Expected Result:Movie is no longer shown
+Actual Result:Movie disappears from list
+Status:Pass 
+
+9. Test Case Name: Functional Logout
+
+Steps to Reproduce:
+1. Login using Clerk
+2. Click on "Logout" button
+Expected Result: User session ends and redirects to login page
+Actual Result: User is logged out successfully
+Status: Pass
+
+--------------------------------------------------------------------------------------------------------------------
+
+Summary of my testing approach
+
+Functional Testing Strategy Summary
+
+1. Scope of Testing
+Focused on key user flows:
+- Authentication: login and registration
+- Search: querying valid and invalid movie titles
+- Playback: verifying smooth streaming and access control
+- Watchlist: adding and removing movies
+
+Each test includes:
+- Test name Login With Valid Credentials
+- Reproduction steps
+- Expected vs actual outcomes
+- status (with warning indicators or failure notes)
+
+2. Test Case Design
+- Followed structured templates: Test Name, Steps, Expected vs Actual Result, Status
+- Used clear, behavior-driven naming like Login With Valid and invalid Credentials`
+
+3. Best Practices Applied
+- Isolation: each test runs independently
+- No logic replication: expected outputs are hardcoded
+
+
